@@ -1,3 +1,5 @@
+Basic Queries:
+
 1)
 SELECT Name FROM students;
 
@@ -26,3 +28,35 @@ WHERE Name = "Basma";
 UPDATE students
 SET Points = Points - 50
 WHERE Name = "Alex";
+
+
+Creating Table:
+
+
+CREATE TABLE "graduates" (
+	"ID"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	"Name"	TEXT NOT NULL UNIQUE,
+	"Age"	INTEGER,
+	"Gender"	TEXT,
+	"Points"	INTEGER,
+	"Graduation"	TEXT
+)
+
+1)
+INSERT INTO graduates (ID, Name, Age, Gender, Points) 
+SELECT * FROM students
+WHERE Name = "Layal";
+
+2)
+UPDATE graduates
+SET Graduation="08/09/2018"
+WHERE Name="Layal";
+
+3)
+DELETE FROM students
+WHERE Name = "Layal";
+
+
+
+
+
