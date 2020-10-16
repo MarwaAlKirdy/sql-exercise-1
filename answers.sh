@@ -57,6 +57,21 @@ DELETE FROM students
 WHERE Name = "Layal";
 
 
+Joins:
+
+1) SELECT employees.Name, employees.Company, companies.Date 
+FROM employees
+INNER JOIN companies ON companies.Name = employees.Company;
+
+2)SELECT employees.Name
+FROM employees
+INNER JOIN companies ON companies.Name = employees.Company AND companies.Date < 2000;
+
+3)SELECT companies.Name
+FROM employees
+INNER JOIN companies ON companies.Name = employees.Company AND employees.Role = "Graphic Designer";
+
+
 
 
 
